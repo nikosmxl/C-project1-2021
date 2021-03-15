@@ -10,7 +10,7 @@ int main(int argc, char* argv[]) {
 	// Δημιουργία array με τις παραμέτρους του προγράμματος, αφού μετατραπούν σε int
 	int size = argc-1;
 	int array[size];
-
+	
 	for(int i = 0; i < size; i++)
 		array[i] = atoi(argv[i+1]);
 

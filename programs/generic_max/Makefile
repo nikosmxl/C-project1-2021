@@ -6,7 +6,7 @@ INCLUDE = ../../include
 CFLAGS = -Wall -Werror -g -I$(INCLUDE)
 
 # Αρχεία .o
-OBJS = generic_max.o
+OBJS = generic_max.o $(MODULES)/stats.o
 
 # Το εκτελέσιμο πρόγραμμα
 EXEC = generic_max

@@ -6,22 +6,23 @@
 
 // συμπληρώστε τα παρακάτω
 struct point_2d {
-	// ...
+	float x;
+	float y;
 };
-// typedef .... Point2d;
+typedef struct point_2d* Point2d;
 
 // διορθώστε τη swap
-void swap(int a, int b) {
-	int temp = a;
-	a = b;
-	b = a;
+void swap(int *a, int *b) {
+	int temp = *a;
+	*a = *b;
+	*b = temp;
 }
 
 void test_swap() {
 	int a = 1;
 	int b = 2;
 
-	swap(a, b);		// η γραμμή αυτή θέλει αλλαγή
+	swap(&a, &b);		// η γραμμή αυτή θέλει αλλαγή
 
 	if(a < b) {
 		printf("Not swapped!\n");
